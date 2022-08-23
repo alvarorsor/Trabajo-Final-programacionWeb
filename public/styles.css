@@ -1,0 +1,52 @@
+header{
+    background-color:ivory;
+    padding: 1rem;
+ 
+}
+
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    background-color:#BCDBF8;
+    padding: 1rem;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+}
+
+
+.registrarMascotaCampos{
+    margin:1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.seccion--izquierda>p{
+margin: 0px;
+color:darkolivegreen;
+margin-top: 1rem;
+
+}
+
+input{
+    
+}
+
+.seccion--derecha>p{
+    margin: 0px;
+    color:darkolivegreen;
+    margin-top: 1rem;
+    }
+
+.registrarMascotaCampos>input{
+    width: 15rem;
+}
+
+.observaciones--campo{
+    height: 5rem;
+}
