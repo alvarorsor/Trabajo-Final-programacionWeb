@@ -5,7 +5,7 @@ function RegistrarMascota() {
         <div class="registrarMascotaCampos">
 
         <div class="seccion--izquierda">
-        <h1>REGISTRAR MASCOTA</h1>
+        <h1>DATOS MASCOTA</h1>
         <p>Los campos marcados con asterisco* son obligatorios.</p>
         <p>Nombre*</p>
         <input type="text" ></input>
@@ -70,15 +70,21 @@ function RegistrarMascota() {
 
 
         <p>Chip</p>
-        <input type="text" ></input>´
+        <input type="text" ></input>
         <p>Orejas</p>
         <input type="text" ></input>
 
         <p>Observaciones</p>
         <input type="text" class="observaciones--campo"></input>
 
-        <h1>FOTOS</h1>
+       
 
+       
+        
+        </div>
+
+        <div class="seccion--derecha">
+        <h3>FOTOS</h3>
         <p>Foto 1*</p>
         
         <label for="img">Select image:</label>
@@ -91,23 +97,21 @@ function RegistrarMascota() {
         <p>Foto 3</p>
         <label for="img">Select image:</label>
         <input type="file" id="img" name="img" accept="image/*" />
-        
-        </div>
 
-        <div class="seccion--derecha">
         <p>¿Cuándo fue encontrado / perdido / puesto en adopción? *</p>
         <label for="start">Fecha </label>
 
         <input type="date" id="start" name="trip-start"
       
        min="2000-01-01" max="2022-12-31" />
-
+        
         <p>Nombre persona*</p>
         <input type="text" ></input>
         <p>Telefono*</p>
         <input type="text" ></input>
         <p>Mail*</p>
         <input type="text" ></input>
+        
         
         </div>
         </div>

@@ -1,8 +1,11 @@
 header{
-    background-color:ivory;
+    background-color:#BCDBF8;
     padding: 1rem;
+    font-size: 1rem;
  
 }
+
+
 
 
 footer{
@@ -19,11 +22,26 @@ img{
 
 
 .registrarMascotaCampos{
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-size: 20px;
     margin:1rem;
     display: flex;
     justify-content: space-between;
 }
 
+
+h1{
+    color:rgb(14, 184, 214);
+}
+
+input{
+    width: 20rem;
+    
+}
+
+label{
+    color:darkolivegreen;
+}
 
 
 .seccion--izquierda>p{
@@ -33,14 +51,17 @@ margin-top: 1rem;
 
 }
 
-input{
+.seccion--derecha{
     
-}
+    margin-top: 3rem;
+    
+    }
 
 .seccion--derecha>p{
     margin: 0px;
     color:darkolivegreen;
     margin-top: 1rem;
+
     }
 
 .registrarMascotaCampos>input{
@@ -49,4 +70,57 @@ input{
 
 .observaciones--campo{
     height: 5rem;
+}
+
+
+
+.busqueda--mascota--campos{
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-size: 20px;
+    padding:1rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.busqueda--mascota--campos>input{
+    width: 10rem;
+    margin: 0px;
+}
+
+.busqueda--mascota--campos>p{
+  margin: 0px;
+  color:darkolivegreen;
+}
+
+
+.seccion--izquierda>h1{
+    position: center;
+}
+
+.cards-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto;
+}
+
+.card {
+    width: 175px;
+    font-size: 12px;
+    flex: 0 0 auto;         /* ADD */
+    display: flex;          /* ADD */
+    flex-direction: column; /* ADD */
+}
+
+.card--image {
+    width: 100%;
+    border-radius: 9px;
+    margin-bottom: 9px;
+}
+
+/* ADD */
+.card--title {
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
