@@ -29,6 +29,11 @@ img{
     justify-content: space-between;
 }
 
+.principal{
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-size: 20px;
+}
+
 
 h1{
     color:rgb(14, 184, 214);
