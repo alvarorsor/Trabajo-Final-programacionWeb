@@ -52,8 +52,6 @@ function BuscarMascota() {
         </div>
 
 
-
-
             <section className="cards-list">
                 {cards}
             </section>

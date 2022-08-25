@@ -4,7 +4,7 @@ function DetallesMascota() {
     return (
         <div>
 
-        <h1>DETALLES MASCOTAzFDGFDGFDGDFGFD</h1>
+        <h1>DETALLES MASCOTA</h1>
 
         <label>Especie</label>
         <label>Raza</label>
