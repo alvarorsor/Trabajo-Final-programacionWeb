@@ -113,6 +113,7 @@ function RegistrarMascota() {
                 onChange={handleChange}
                 name="sexo"
             >
+                <option value="m">Sexo</option>
                 <option value="macho">Macho</option>
                 <option value="hembra">Hembra</option>
                 
@@ -129,6 +130,7 @@ function RegistrarMascota() {
                 onChange={handleChange}
                 name="años"
             >
+             <option value="">Años</option>
                  <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -167,6 +169,7 @@ function RegistrarMascota() {
                 onChange={handleChange}
                 name="meses"
             >
+             <option value="">Meses</option>
                  <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
