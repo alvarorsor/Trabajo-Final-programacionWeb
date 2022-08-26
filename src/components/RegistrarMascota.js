@@ -41,21 +41,18 @@ function RegistrarMascota() {
 
     return (
 
-        <form onSubmit={handleSubmit}>
 
-        <div class="registrarMascotaCampos">
+<form onSubmit={handleSubmit}>
 
-        <div class="seccion--izquierda">
+ <div class="registrarMascotaCampos">
 
-       
-          
+    <div class="seccion--izquierda">
+   
 
         <h1>DATOS MASCOTA</h1>
         <p>Los campos marcados con asterisco* son obligatorios.</p>
        
        
-
-
             <input
                     type="text"
                     placeholder="Nombre Mascota"
@@ -63,7 +60,7 @@ function RegistrarMascota() {
                     name="nombre"
                     value={formData.nombre}
                 />
-            
+<br/>
             <input
                 type="text"
                 placeholder="Color"
@@ -71,7 +68,7 @@ function RegistrarMascota() {
                 name="color"
                 value={formData.color}
             />
-
+<br/>
                 <input
                 type="text"
                 placeholder="Raza"
@@ -80,7 +77,7 @@ function RegistrarMascota() {
                 value={formData.raza}
             />
 
-
+<br/>
                 <input
                 type="text"
                 placeholder="Chip"
@@ -88,7 +85,7 @@ function RegistrarMascota() {
                 name="chip"
                 value={formData.chip}
             />
-
+<br/>
                 <input
                 type="text"
                 placeholder="Orejas"
@@ -96,7 +93,7 @@ function RegistrarMascota() {
                 name="orejas"
                 value={formData.orejas}
             />
-
+<br/>
                 <textarea 
                 value={formData.observaciones}
                 placeholder="Observaciones"
@@ -104,7 +101,8 @@ function RegistrarMascota() {
                 name="observaciones"
             />
        
-        
+ <br/>       
+
        <label htmlFor="sexo">Sexo*</label>
             <br />
             <select 
@@ -117,12 +115,12 @@ function RegistrarMascota() {
                 <option value="hembra">Hembra</option>
                 
             </select>
-            <br />
-            <br />
+<br />
+<br />
 
 
             <label htmlFor="años">Años*</label>
-            <br />
+<br />
             <select 
                 id="años" 
                 value={formData.años}
@@ -160,7 +158,7 @@ function RegistrarMascota() {
            
 
             <label htmlFor="meses">Meses*</label>
-            <br />
+<br />
             <select 
                 id="meses" 
                 value={formData.meses}
@@ -182,15 +180,20 @@ function RegistrarMascota() {
                 <option value="12">12</option>
                 
             </select>
-        
+
+    </div>
+            
+    <div class="seccion--derecha">
+            
             <input
+
                 type="text"
                 placeholder="Nombre dueño*"
                 onChange={handleChange}
                 name="nombreDueño"
                 value={formData.nombreDueño}
             />
-
+<br/>
             <input
                 type="text"
                 placeholder="Telefono dueño*"
@@ -198,7 +201,7 @@ function RegistrarMascota() {
                 name="telefonoDueño"
                 value={formData.telefonoDueño}
             />
-
+<br/>
                 <input
                 type="text"
                 placeholder="Mail dueño*"
@@ -214,13 +217,12 @@ function RegistrarMascota() {
             <br />
             <button>Submit</button>
 
-
+    </div>
         
-        </div>
+        
+</div>
 
-       
-        </div>
-        </form>
+</form>
     )
 }
 
