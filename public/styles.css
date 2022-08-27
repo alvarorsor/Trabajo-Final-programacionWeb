@@ -27,6 +27,7 @@ img{
     margin:1rem;
     display:flex;
     justify-content: space-between;
+    padding: 1rem;
     
 }
 
@@ -62,7 +63,8 @@ margin-top: 1rem;
 
 .seccion--derecha{
     
-    margin-top: 3rem;
+    margin-top: 5rem;
+    
     
     }
 
@@ -72,6 +74,14 @@ margin-top: 1rem;
     margin-top: 1rem;
 
     }
+
+    .seccion--derecha>input{
+
+        color:darkolivegreen;
+        
+        margin-bottom: 1rem;
+    
+        }
 
 .registrarMascotaCampos>input{
     width: 15rem;
@@ -137,3 +147,8 @@ margin-top: 1rem;
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.seccion--izquierda>input{
+    margin-bottom: 1rem;
+}
+

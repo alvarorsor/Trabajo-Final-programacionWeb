@@ -3,6 +3,7 @@ import Card from "./Card"
 import data from "./data"
 
 
+
 function BuscarMascota() {
     
 
@@ -10,7 +11,7 @@ function BuscarMascota() {
        
     return (
         <Card
-            key={item.id}
+            id={item.id}
             imagen={item.foto1}
             nombre={item.nombre}
             sexo={item.sexo}
@@ -20,6 +21,31 @@ function BuscarMascota() {
         />
     )
 })        
+
+/*function verDetallesMascota(id){
+
+    const detallesMascota = data.map(function(item){
+        if(item.id == id){
+            <DetallesMascota
+            id={item.id}
+            imagen={item.foto1}
+            nombre={item.nombre}
+            sexo={item.sexo}
+            raza={item.raza}
+            años={item.años}
+            meses={item.meses}
+        />
+        }
+    })
+      
+    return
+   {detallesMascota}
+
+    }   
+
+*/
+   
+
     
     
     return (
@@ -53,7 +79,9 @@ function BuscarMascota() {
 
 
             <section className="cards-list">
-                {cards}
+        
+           {cards}
+            
             </section>
         
 
@@ -62,5 +90,7 @@ function BuscarMascota() {
 
     )
 }
+
+
 
 export default BuscarMascota

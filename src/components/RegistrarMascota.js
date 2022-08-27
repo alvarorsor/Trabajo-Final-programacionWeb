@@ -15,7 +15,8 @@ function RegistrarMascota() {
             observaciones: "",
             nombreDueño: "",
             telefonoDueño: "",
-            mailDueño: ""
+            mailDueño: "",
+            foto1: ""
         }
     )
 
@@ -116,7 +117,7 @@ function RegistrarMascota() {
                 <option value="hembra">Hembra</option>
                 
             </select>
-<br />
+
 <br />
 
 
@@ -157,7 +158,7 @@ function RegistrarMascota() {
                 <option value="25">25</option>
                 
             </select>
-           
+ <br />           
 
             <label htmlFor="meses">Meses*</label>
 <br />
@@ -167,6 +168,7 @@ function RegistrarMascota() {
                 onChange={handleChange}
                 name="meses"
             >
+  
              <option value="">Meses</option>
                  <option value="0">0</option>
                 <option value="1">1</option>
@@ -187,7 +189,13 @@ function RegistrarMascota() {
     </div>
             
     <div class="seccion--derecha">
-            
+
+    <p>Foto 1*</p>
+
+<label for="foto1">Select image:</label>
+<input type="file" id="foto1" name="foto1" value={formData.foto1}
+                onChange={handleChange} accept="image/*" />
+<br/>            
             <input
 
                 type="text"

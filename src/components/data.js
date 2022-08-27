@@ -2,7 +2,7 @@
 
 export default [
     {
-        id: 1,
+        id: "1",
         nombre: "Lili",
         color: "blanca",
         sexo: "hembra",
@@ -22,7 +22,7 @@ export default [
         
     },
     {
-        id: 1,
+        id: "2",
         nombre: "Lili",
         color: "blanca",
         sexo: "hembra",
@@ -42,7 +42,7 @@ export default [
         
     },
     {
-        id: 1,
+        id: "3",
         nombre: "Lili",
         color: "blanca",
         sexo: "hembra",
