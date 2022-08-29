@@ -1,15 +1,18 @@
 import React from "react"
 import {Link} from "react-router-dom"
+import ReactDOM from 'react-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
-
-
+const element = <FontAwesomeIcon icon={fa-thin fa-house} />
 export default function Navbar() {
     return (
       <header>
 
 <ul class="nav nav-pills">
 <li class="nav-item">
-<FontAwesomeIcon icon="fa-thin fa-house" />
+
+{element}
 <Link to="/" class="nav-link">PRINCIPAL</Link>
 </li>
 <li class="nav-item">
