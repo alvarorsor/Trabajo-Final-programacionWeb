@@ -11,31 +11,42 @@ function DetallesMascota(props) {
    
    
     return (
-        <div>
+        <div class="detalles--mascota">
 
-        <h1>DETALLES MASCOTA</h1>
+        
 
-        <label>Nombre {thisService.nombre}</label>
+        <label>Nombre</label>
+        <label class="box_label">{thisService.nombre}</label>
         <br/>
-        <label>Raza {thisService.raza}</label>
+        <label>Raza</label>
+        <label class="box_label">{thisService.raza}</label>
         <br/>
-         <label>Sexo {thisService.sexo}</label>
+         <label>Sexo</label>
+         <label class="box_label">{thisService.sexo}</label>
         <br/>
-        <label>Años {thisService.años}</label>
+        <label>Años</label>
+        <label class="box_label">{thisService.años}</label>
         <br/>
-        <label>chip</label>
+        <label>Chip</label>
+        <label class="box_label">{thisService.chip}</label>
         <br/>
-        <label>orejas</label>
+        <label>Orejas</label>
+        <label class="box_label">{thisService.orejas}</label>
         <br/>
-        <label>color</label>
+        <label>Color</label>
+        <label class="box_label">{thisService.color}</label>
         <br/>
-        <label>observaciones</label>
+        <label>Observaciones</label><br />
+        <label class="box_label">{thisService.observaciones}</label>
         <br/>
         <label>Nombre dueño</label>
+        <label class="box_label">{thisService.nombreDueño}</label>
         <br/>
         <label>Telefono dueño</label>
+        <label class="box_label">{thisService.telefonoDueño}</label>
         <br/>
         <label>Correo dueño</label>
+        <label class="box_label">{thisService.mailDueño}</label>
 
 
 

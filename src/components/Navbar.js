@@ -9,6 +9,7 @@ export default function Navbar() {
 
 <ul class="nav nav-pills">
 <li class="nav-item">
+<FontAwesomeIcon icon="fa-thin fa-house" />
 <Link to="/" class="nav-link">PRINCIPAL</Link>
 </li>
 <li class="nav-item">

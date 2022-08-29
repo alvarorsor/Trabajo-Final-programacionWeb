@@ -4,6 +4,7 @@ function RegistrarMascota() {
 
     const [formData, setFormData] = React.useState(
         {
+            id: "",
             nombre: "", 
             color: "", 
             sexo: "", 
@@ -26,15 +27,22 @@ function RegistrarMascota() {
             return {
                 ...prevFormData,
                 [name]: type === "checkbox" ? checked : value
+                
             }
         })
+        
     }
     
+    let id_number = (data.length + 1).toString()
     function handleSubmit(event) {
+
+      
+        setFormData(item => item.id = id_number)
+
         event.preventDefault()
         // submitToApi(formData)
         console.log(formData)
-
+       
 
         data.push(formData)
     }
@@ -103,6 +111,7 @@ function RegistrarMascota() {
             />
        
  <br/>       
+
 
        <label htmlFor="sexo">Sexo*</label>
             <br />
@@ -226,7 +235,7 @@ function RegistrarMascota() {
 
             <br />
             <br />
-            <button>Submit</button>
+            <button>REGISTRAR MASCOTA</button>
 
     </div>
         
