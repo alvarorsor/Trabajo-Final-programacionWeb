@@ -2,6 +2,16 @@ import React from "react"
 import {useParams} from "react-router-dom"
 import data from "./data"
 
+import {Link} from "react-router-dom"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee, faHouse, faList, faPhone, faSearch } from '@fortawesome/free-solid-svg-icons'
+
+
+const phoneIcon = <FontAwesomeIcon icon={faPhone} />
+const searchIcon = <FontAwesomeIcon icon={faSearch} />
+const listhIcon = <FontAwesomeIcon icon={faList} />
+
+
 function DetallesMascota(props) {
    
     const {serviceId} = useParams()
@@ -39,14 +49,14 @@ function DetallesMascota(props) {
         <label>Observaciones</label><br />
         <label class="box_label">{thisService.observaciones}</label>
         <br/>
-        <label>Nombre dueño</label>
-        <label class="box_label">{thisService.nombreDueño}</label>
+        
+        <label class="box_dueño">{phoneIcon} <br /> NOMBRE <br />{thisService.nombreDueño}</label>
         <br/>
-        <label>Telefono dueño</label>
-        <label class="box_label">{thisService.telefonoDueño}</label>
+        <label>TELEFONO</label>
+        <label>{thisService.telefonoDueño}</label>
         <br/>
-        <label>Correo dueño</label>
-        <label class="box_label">{thisService.mailDueño}</label>
+        <label>MAIL</label>
+        <label>{thisService.mailDueño}</label>
 
 
 

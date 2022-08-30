@@ -180,3 +180,10 @@ textarea{
     width: 20rem;
     height: 15rem;
 }
+
+.box_dueño{
+    height: 300px;
+    width: 300px;
+    background-color: aqua;
+    text-align: center;
+}
