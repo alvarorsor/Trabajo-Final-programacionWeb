@@ -1,10 +1,12 @@
 import React from "react"
 import {Link} from "react-router-dom"
-import ReactDOM from 'react-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { faCoffee, faHouse, faList, faSearch } from '@fortawesome/free-solid-svg-icons'
+<FontAwesomeIcon icon="" />
+const houseIcon = <FontAwesomeIcon icon={faHouse} />
+const searchIcon = <FontAwesomeIcon icon={faSearch} />
+const listhIcon = <FontAwesomeIcon icon={faList} />
 
-const element = <FontAwesomeIcon icon={fa-thin fa-house} />
 export default function Navbar() {
     return (
       <header>
@@ -12,18 +14,16 @@ export default function Navbar() {
 <ul class="nav nav-pills">
 <li class="nav-item">
 
-{element}
-<Link to="/" class="nav-link">PRINCIPAL</Link>
+
+<Link to="/" class="nav-link">{houseIcon} PRINCIPAL</Link>
 </li>
 <li class="nav-item">
-<Link to="/BuscarMascota" class="nav-link">BUSCAR MASCOTA</Link>
+<Link to="/BuscarMascota" class="nav-link">{searchIcon} BUSCAR MASCOTA</Link>
 </li>
 <li class="nav-item">
-<Link to="/RegistrarMascota" class="nav-link">REGISTRAR MASCOTA</Link>
+<Link to="/RegistrarMascota" class="nav-link">{listhIcon} REGISTRAR MASCOTA</Link>
 </li>
-<li class="nav-item">
-  <a class="nav-link disabled">Disabled</a>
-</li>
+
 </ul>
 
   </header>
