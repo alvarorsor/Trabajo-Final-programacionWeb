@@ -3,6 +3,29 @@
 export default [
     {
         id: "1",
+        Nombre: "Cándido",
+        Especie: "Gato",
+        Raza: "Siamés",
+        Tamaño: "Mediano",
+        Sexo: "Macho",
+        Años: "7",
+        Meses: "5",
+        Chip: "",
+        Placa: "",
+        Cola: "Cola larga",
+        Orejas: "Orejas paradas",
+        Color: "Cafe Claro",
+        Manchas: "Cafe Claro",
+        Observaciones: "Carita, patas, cola color chocolate. Ojos azules",
+        foto1: "lili.png",
+        foto2: "",
+        foto3: "",
+        fecha: "21/08/2022",
+        nombreDueño: "Jose Francisco Revuelta Meza",
+        telefonoDueño: "4423599847",
+        mailDueño: "jofrarem@hotmail.com"
+
+        /*id: "1",
         nombre: "Lili",
         color: "blanca",
         sexo: "hembra",
@@ -19,7 +42,7 @@ export default [
         nombreDueño: "Alvaro Salazar",
         telefonoDueño: "381764422",
         mailDueño: "alvarosalazar@gmail.com"
-        
+        */
     },
     {
         id: "2",

@@ -4,7 +4,7 @@ function RegistrarMascota() {
 
     const [formData, setFormData] = React.useState(
         {
-            id: "",
+          /*  id: "",
             nombre: "", 
             color: "", 
             sexo: "", 
@@ -17,8 +17,32 @@ function RegistrarMascota() {
             nombreDueño: "",
             telefonoDueño: "",
             mailDueño: "",
-            foto1: ""
-        }
+            foto1: ""*/
+
+
+            id: "",
+            nombre: "", 
+            especie: "",
+            raza: "",
+            tamaño: "",
+            sexo: "",
+            años: "",
+            meses: "",
+            chip: "",
+            placa: "",
+            cola: "",
+            orejas: "",
+            color: "",
+            manchas: "",
+            observaciones: "",
+            foto1: "",
+            foto2: "",
+            foto3: "",
+            fecha: "",
+            nombreDueño: "",
+            telefonoDueño: "",
+            mailDueño: ""
+            }
     )
 
     function handleChange(event) {
@@ -70,15 +94,23 @@ function RegistrarMascota() {
                     value={formData.nombre}
                 />
 <br/>
-            <input
-                type="text"
-                placeholder="Color"
+
+<label htmlFor="especie">Especie*</label>
+            <br />
+            <select 
+                id="especie" 
+                value={formData.especie}
                 onChange={handleChange}
-                name="color"
-                value={formData.color}
-            />
+                name="especie"
+            >
+                <option value="m">Especie</option>
+                <option value="gato">Gato</option>
+                <option value="perro">Perro</option>
+                
+            </select>
 <br/>
-                <input
+
+<input
                 type="text"
                 placeholder="Raza"
                 onChange={handleChange}
@@ -86,32 +118,24 @@ function RegistrarMascota() {
                 value={formData.raza}
             />
 
-<br/>
-                <input
-                type="text"
-                placeholder="Chip"
-                onChange={handleChange}
-                name="chip"
-                value={formData.chip}
-            />
-<br/>
-                <input
-                type="text"
-                placeholder="Orejas"
-                onChange={handleChange}
-                name="orejas"
-                value={formData.orejas}
-            />
-<br/>
-                <textarea 
-                value={formData.observaciones}
-                placeholder="Observaciones"
-                onChange={handleChange}
-                name="observaciones"
-            />
-       
- <br/>       
+<br/>      
 
+<label htmlFor="tamaño">Tamaño*</label>
+            <br />
+            <select 
+                id="tamaño" 
+                value={formData.especie}
+                onChange={handleChange}
+                name="tamaño"
+            >
+                <option value="">Tamaño*</option>
+                <option value="grande">Grande</option>
+                <option value="mediano">Mediano</option>
+                <option value="chico">Chico</option>
+                
+            </select>
+<br/>
+       
 
        <label htmlFor="sexo">Sexo*</label>
             <br />
@@ -121,7 +145,7 @@ function RegistrarMascota() {
                 onChange={handleChange}
                 name="sexo"
             >
-                <option value="m">Sexo</option>
+                <option value="">Sexo*</option>
                 <option value="macho">Macho</option>
                 <option value="hembra">Hembra</option>
                 
@@ -129,8 +153,7 @@ function RegistrarMascota() {
 
 <br />
 
-
-            <label htmlFor="años">Años*</label>
+<label htmlFor="años">Años*</label>
 <br />
             <select 
                 id="años" 
@@ -194,6 +217,80 @@ function RegistrarMascota() {
                 <option value="12">12</option>
                 
             </select>
+
+            <br/>
+              
+                <input
+                type="text"
+                placeholder="Chip"
+                onChange={handleChange}
+                name="chip"
+                value={formData.chip}
+            />
+<br/>
+
+<input
+                type="text"
+                placeholder="Placa"
+                onChange={handleChange}
+                name="placa"
+                value={formData.placa}
+            />
+<br/>
+
+
+<input
+                type="text"
+                placeholder="Cola"
+                onChange={handleChange}
+                name="cola"
+                value={formData.cola}
+            />
+
+<br/>       
+
+<input
+                type="text"
+                placeholder="Orejas"
+                onChange={handleChange}
+                name="orejas"
+                value={formData.orejas}
+            />
+<br/>
+
+<input
+                type="text"
+                placeholder="Color"
+                onChange={handleChange}
+                name="color"
+                value={formData.color}
+            />
+<br/>
+
+<input
+                type="text"
+                placeholder="Manchas"
+                onChange={handleChange}
+                name="manchas"
+                value={formData.manchas}
+            />
+<br/>
+
+
+                <textarea 
+                value={formData.observaciones}
+                placeholder="Observaciones"
+                onChange={handleChange}
+                name="observaciones"
+            />
+       
+ <br/>       
+
+
+<br />
+
+
+      
 
     </div>
             

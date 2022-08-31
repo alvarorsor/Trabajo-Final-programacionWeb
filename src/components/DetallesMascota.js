@@ -5,11 +5,25 @@ import data from "./data"
 import {Link} from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee, faEnvelope, faEnvelopeOpen, faHouse, faList, faPhone, faSearch, faUser } from '@fortawesome/free-solid-svg-icons'
-import imagenAnimal from "../images/${thisService.foto1}"
+/*import imagenAnimal from `../images/${thisService.foto1}`*/
 
 const phoneIcon = <FontAwesomeIcon icon={faPhone} />
 const userIcon = <FontAwesomeIcon icon={faUser} />
 const mailIcon = <FontAwesomeIcon icon={faEnvelope} />
+
+
+
+function importAll(r) {
+        let images = {};
+        r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+        return images;
+      }
+      
+      const images = importAll(require.context('../images', false, /\.(png|jpe?g|svg)$/));
+      
+      <img src={images['lili.png']} />
+
+
 
 
 function DetallesMascota(props) {
@@ -24,20 +38,18 @@ function DetallesMascota(props) {
         <div class="detalles--mascota">
 
 
-        <div class="campos-total">
-        <label>FOTO</label>
-        <br />
-        <img src={thisService.foto1}/>
-        
-       <div class="campos-derecha">
 
-       </div>
+        <div class="campos--izquierda--derecha">
 
 
-        <div class="campos-principal">
+      
+
+
+
+        <div class="campos-izquierda">
 
         <div class="campos">
-        <label>Nombre</label>
+        <label>Especie</label>
         <br />
         <label>Raza</label>
         <br />
@@ -77,7 +89,18 @@ function DetallesMascota(props) {
         
 
 
+                        <div class="campos-derecha">
+
+                <h2>{thisService.nombre}</h2>
+                <br />
+                <img src={images[thisService.foto1]} class="detalles--mascota--imagen"/>
+
+                </div>
+
+
         </div>
+
+
 
         <h3 id="datos-de-contacto">DATOS DE CONTACTO</h3>
         <div class="datos-contacto-dueño">
