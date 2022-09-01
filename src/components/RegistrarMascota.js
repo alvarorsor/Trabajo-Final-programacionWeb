@@ -103,7 +103,7 @@ function RegistrarMascota() {
                 onChange={handleChange}
                 name="especie"
             >
-                <option value="m">Especie</option>
+                <option value="Sin especificar">Especie</option>
                 <option value="gato">Gato</option>
                 <option value="perro">Perro</option>
                 
@@ -120,7 +120,7 @@ function RegistrarMascota() {
 
 <br/>      
 
-<label htmlFor="tamaño">Tamaño*</label>
+<label htmlFor="tamaño">Tamaño</label>
             <br />
             <select 
                 id="tamaño" 
@@ -128,7 +128,7 @@ function RegistrarMascota() {
                 onChange={handleChange}
                 name="tamaño"
             >
-                <option value="">Tamaño*</option>
+                <option value="Sin especificar">Tamaño</option>
                 <option value="grande">Grande</option>
                 <option value="mediano">Mediano</option>
                 <option value="chico">Chico</option>
@@ -192,7 +192,7 @@ function RegistrarMascota() {
             </select>
  <br />           
 
-            <label htmlFor="meses">Meses*</label>
+            <label htmlFor="meses">Meses</label>
 <br />
             <select 
                 id="meses" 
@@ -296,10 +296,32 @@ function RegistrarMascota() {
             
     <div class="seccion--derecha">
 
+    
+        <p>¿Cuándo fue encontrado encontrado? *</p>
+        <label for="start">Fecha  </label>
+
+        <input type="date" id="start" name="trip-start"
+
+        min="2000-01-01" max="2022-12-31" />
+
+
+
     <p>Foto 1*</p>
 
 <label for="foto1">Select image:</label>
 <input type="file" id="foto1" name="foto1" value={formData.foto1}
+                onChange={handleChange} accept="image/*" />
+<br/>            
+<p>Foto 2*</p>
+
+<label for="foto2">Select image:</label>
+<input type="file" id="foto1" name="foto1" value={formData.foto2}
+                onChange={handleChange} accept="image/*" />
+<br/>            
+<p>Foto 3*</p>
+
+<label for="foto3">Select image:</label>
+<input type="file" id="foto1" name="foto1" value={formData.foto3}
                 onChange={handleChange} accept="image/*" />
 <br/>            
             <input

@@ -44,59 +44,80 @@ function DetallesMascota(props) {
 
       
 
-
-
         <div class="campos-izquierda">
 
         <div class="campos">
+        
         <label>Especie</label>
         <br />
         <label>Raza</label>
         <br />
         <label>Sexo</label>
-<br />
+        <br />
         <label>Años</label>
-<br />
+        <br />
+        <label>Meses</label>
+        <br />
         <label>Chip</label>
-<br />
+        <br />
+        <label>Placa</label>
+        <br />
+        <label>Cola</label>
+        <br />
         <label>Orejas</label>
-<br />
+        <br />
         <label>Color</label>
-<br />
+        <br />
+        <label>Manchas</label>
+        <br />
         <label>Observaciones</label>
+        <br />
+
+
         </div>
 
 
         <div class="campos-datos">
-        <label>{thisService.nombre}</label>
+
+
+        <label>{thisService.especie}</label>
         <br />
-       <label>{thisService.raza}</label>
-       <br />
-            <label>{thisService.sexo}</label>
-<br />
-            <label>{thisService.años}</label>
-<br />
-            <label>{thisService.chip}</label>
-<br />
-            <label>{thisService.orejas}</label>
-<br />
-            <label>{thisService.color}</label>
-    <br />        
-            <label class="observaciones">{thisService.observaciones}</label>
+        <label>{thisService.raza}</label>
+        <br />
+        <label>{thisService.sexo}</label>
+        <br />
+        <label>{thisService.años}</label>
+        <br />
+        <label>{thisService.meses}</label>
+        <br />
+        <label>{thisService.chip}</label>
+        <br />        
+        <label>{thisService.placa}</label>
+        <br />    
+        <label>{thisService.cola}</label>
+        <br />    
+        <label>{thisService.orejas}</label>
+        <br />    
+        <label>{thisService.color}</label>
+        <br />    
+        <label>{thisService.manchas}</label>
+        <br />    
+        <label class="observaciones">{thisService.observaciones}</label>
+        
+        
         </div>
        
         </div>
         
 
 
-                        <div class="campos-derecha">
+        <div class="campos-derecha">
 
-                <h2>{thisService.nombre}</h2>
-                <br />
-                <img src={images[thisService.foto1]} class="detalles--mascota--imagen"/>
+        <h2>{thisService.nombre}</h2>
+        <br />
+        <img src={images[thisService.foto1]} class="detalles--mascota--imagen"/>
 
-                </div>
-
+        </div>
 
         </div>
 
@@ -126,10 +147,6 @@ function DetallesMascota(props) {
        
         </div>
       
-
-
-
-
         </div>
     )
 }
