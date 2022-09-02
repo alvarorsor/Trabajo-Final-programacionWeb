@@ -257,3 +257,14 @@ textarea{
     display: flex;
     justify-content: space-between;
 }
+
+
+.detalles--mascota--nombre{
+   position: center;
+}
+
+
+input.invalid{
+    border-color: #900;
+    background-color: #FDD;
+  }

@@ -70,6 +70,8 @@ function DetallesMascota(props) {
         <br />
         <label>Manchas</label>
         <br />
+        <label>Fecha</label>
+        <br />
         <label>Observaciones</label>
         <br />
 
@@ -101,6 +103,8 @@ function DetallesMascota(props) {
         <label>{thisService.color}</label>
         <br />    
         <label>{thisService.manchas}</label>
+        <br />  
+        <label>{thisService.fecha}</label>
         <br />    
         <label class="observaciones">{thisService.observaciones}</label>
         
@@ -113,7 +117,7 @@ function DetallesMascota(props) {
 
         <div class="campos-derecha">
 
-        <h2>{thisService.nombre}</h2>
+        <h1 class="detalles--mascota--nombre">{thisService.nombre}</h1>
         <br />
         <img src={images[thisService.foto1]} class="detalles--mascota--imagen"/>
 
