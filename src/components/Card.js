@@ -22,28 +22,64 @@ export default function Card(props) {
     id={props.id}
     imagen={props.foto1}
     nombre={props.nombre}
-    sexo={props.sexo}
-    raza={props.raza}
-    años={props.años}
-    meses={props.meses}
+    raza={props.raza}  
+    fecha={props.fecha}
+    observaciones={props.observaciones}
 />
    
     return (
        
       
-        <div className="card">
-            <img src={images[props.imagen]} className="card--image" />
+        <div class="col-lg-4 col-md-12 text-center mascota-list-item">
+           
+            {/*NOMBRE MASCOTA*/}
+            <h5 class="sub-header">{props.nombre}</h5>
+            
+            {/*team member*/}
+   
+   <div class="team-wrap">
+     <div class="member text-center">
+         <div class="wrap">
+         {/* Info */}
+             <div class="info">
+             {/* RAZA MASCOTA*/}
+             <h3 class="name">{props.raza}</h3>
+             {/* Encontrado el día */}
+                                 <h4 class="position">Perdido el día {props.fecha}</h4>
+                         </div>
+                         { /* 14/07/2017 /info/*}
+         
+         {/* IMAGEN DESTACADA 1*/}
+             <img src={images[props.imagen]} alt="" class="img-circle img-responsive"/>                           
+         </div>
+         {/* /wrap */}
+         <div class="more">
+         {/* OBSERVACIONES */}
+             <p>{props.observaciones}</p>
+          {/* DETALLES */}
+          <Link class="btn--buscar--mascota" to={`/DetallesMascota/${props.id}`}>Ver detalles</Link> 
+              </div>
+              {/* /more  */}
+          </div>
+          { /* / member  */}
+      </div>
+            
 
-            <p className="card--title">Nombre: {props.nombre}</p>
+
+
+
+           {/* <img src={images[props.imagen]} className="card--image" />
+
+           
             <p>Sexo: {props.sexo}</p>
             <p>Raza: {props.raza}</p>
             <p>Años: {props.años}</p>
             <p>Meses: {props.meses}</p>
 
-           
+            <a class="btn--buscar--mascota" href="https://huellitasperdidas.org/mascotas/draki/">Ver Detalles</a>
           
-            <Link to={`/DetallesMascota/${props.id}`}>Detalles mascota</Link> 
-           
+            
+           */}
        
        
         </div>

@@ -1,8 +1,10 @@
 import React from "react"
 import Card from "./Card"
 import data from "./data"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee, faEnvelope, faEnvelopeOpen, faHouse, faList, faPhone, faSearch, faUser } from '@fortawesome/free-solid-svg-icons'
 
-
+const searchIcon =  <FontAwesomeIcon icon={faSearch} />
 
 function BuscarMascota() {
     
@@ -11,13 +13,13 @@ function BuscarMascota() {
        
     return (
         <Card
-            id={item.id}
-            imagen={item.foto1}
-            nombre={item.nombre}
-            sexo={item.sexo}
-            raza={item.raza}
-            años={item.años}
-            meses={item.meses}
+        id={item.id}
+    imagen={item.foto1}
+    nombre={item.nombre}
+    raza={item.raza}  
+    fecha={item.fecha}
+    observaciones={item.observaciones}
+           
         />
     )
 })        
@@ -51,30 +53,49 @@ function BuscarMascota() {
     return (
         <div>
 
+        <p>Utiliza uno o varios campos del filtro de búsqueda para encontar a tu mascota.</p>
+        
         <div class="busqueda--mascota--campos">
 
-        <p>Nombre</p>
-        <input type="text" ></input>
-        <p>Sexo</p>
-        <select name="select">
-        <option value="value1">Macho</option>
-        <option value="value2">Hembra</option>
-        </select>
-        <p>Especie</p>
-        <select name="select">
-        <option value="value1">Perros</option>
-        <option value="value2">Gatos</option>
-        </select>
-        <p>Raza</p>
-        <input type="text" ></input>
-       <br></br>
-        <label for="start">Fecha </label>
 
-        <input type="date" id="start" name="trip-start"
+        <select class="select--buscar--especie"
+                id="especie"  
+                name="especie"  
+            >
+                <option value="">Especie</option>
+                <option value="gato">Gato</option>
+                <option value="perro">Perro</option>
+                
+            </select>
 
-        min="2000-01-01" max="2022-12-31" />
 
-        <button>BUSCAR</button>
+            <select 
+                id="sexo" 
+                name="sexo"
+                
+            >
+                <option value="">Sexo</option>
+                <option value="macho">Macho</option>
+                <option value="hembra">Hembra</option>
+                
+            </select>
+
+            <input
+                type="text"
+                placeholder="Raza"
+                name="raza"
+                required
+            />
+
+
+        <input type="date" id="fecha" name="fecha" 
+                       
+
+        min="2000-01-01" max="2022-12-31" 
+        
+        />
+       
+        <button class="btn--buscar--mascota">{searchIcon} BUSCAR</button>
         </div>
 
 

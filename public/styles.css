@@ -5,7 +5,7 @@ header{
  
 }
 
-
+html{font-family: 'Mouse Memoirs', sans-serif;}
 
 
 footer{
@@ -98,13 +98,19 @@ margin-top: 1rem;
     font-family: 'Mouse Memoirs', sans-serif;
     font-size: 20px;
     padding:1rem;
+   
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 
 .busqueda--mascota--campos>input{
     width: 10rem;
+    margin: 0px;
+}
+
+.busqueda--mascota--campos>select{
+    
     margin: 0px;
 }
 
@@ -126,28 +132,111 @@ margin-top: 1rem;
     padding: 3rem;
 }
 
-.card {
-    width: 175px;
-    font-size: 12px;
-    flex: 0 0 auto;         
-    display: flex;          
-    flex-direction: column;
-    align-items: center; 
-    font-family: 'Mouse Memoirs', sans-serif;
-    font-size: 20px;    
-}
 
-.card--image {
-    width: 100%;
-    border-radius: 9px;
-    margin-bottom: 9px;
-}
+
+
 
 /* ADD */
-.card--title {
-    overflow: hidden;
-    text-overflow: ellipsis;
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
+
+p, ul {
+    font-size: 17px;
+    line-height: 34px;
+}
+
+.sub-header{
+   
+  
+    color: #292929;
+    letter-spacing: -0.4px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    background: #ffefd5;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px;
+    border-radius: 20px;
+    font-size: 22px;
+}
+
+.team-wrap {
+    border-radius: 15px;
+}
+
+.team-wrap .member {
+    border-radius: 15px;
+    background-clip: padding-box;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    border-bottom: 10px solid;
+    background-color: #F5F3EE;
+    border-color: #108896;
+}
+
+.team-wrap .member .wrap {
+    position: relative;
+    transition: all .3s ease;
+}
+
+.team-wrap .member .wrap .info {
+    padding: 20px 0;
+    top: 0%;
+    width: 100%;
+}
+
+.team-wrap .member:hover .info {
+    top: 0;
+}
+
+.team-wrap .member .wrap .info .position {
+    margin: 0;
+    font-size: 16px;
+}
+
+.team-wrap .member:hover img {
+    opacity: 0;
+}
+
+
+.team-wrap .member .wrap img {
+    width: 100%;
+    transition: all .3s ease;
+    padding: 20px;
+}
+
+.img-circle, .blog-post, .sidebar, .accordion-group {
+    border-color: #F5F3EE;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+.team-wrap .member:hover .more {
+    bottom: 0;
+}
+
+.team-wrap .member .more {
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+    padding: 10px;
+    transition: all .3s ease;
+}
+
+
+
+
+
+
+
+
 
 .seccion--izquierda>input{
     margin-bottom: 1rem;
@@ -268,3 +357,46 @@ input.invalid{
     border-color: #900;
     background-color: #FDD;
   }
+
+  .btn--buscar--mascota{
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Baloo Thambi', sans-serif;
+    font-size: 15px;
+    transition: all .3s ease-in-out;
+    border-radius: 25px;
+    margin-top: 10px;
+    letter-spacing: 0.1px;
+    line-height: 1em;
+    padding: 20px 30px;
+    text-transform: uppercase;
+    box-shadow: inset 9px 0px 0px 0px #f19f1f;
+    background-color: #EF5030;
+  }
+
+
+  .btn--buscar--mascota:hover{background-color: #108896;
+    color: #fff;
+    box-shadow: none;
+    text-decoration: none;
+}
+
+
+.select--buscar--especie{
+    transition: all .2s ease-in-out;
+    border-radius: 25px;
+    font-size: 15px;
+    margin: 5px;
+    text-transform: uppercase;
+    padding: 20px 30px;
+    font-family: 'Baloo Thambi', sans-serif;
+    background-color: #108896;
+    color:#fff;
+}
+
+.select--buscar--especie:hover{
+    background-color: #EF5030;
+    color: #fff;
+}
