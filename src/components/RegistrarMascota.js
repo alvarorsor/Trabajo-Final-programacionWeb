@@ -321,7 +321,7 @@ function RegistrarMascota() {
     <div class="seccion--derecha">
 
     
-        <p>¿Cuándo fue encontrado encontrado? *</p>
+        <p>¿Cuándo se perdió? *</p>
         <label for="start">Fecha</label>
 
         <input type="date" id="fecha" name="fecha" value={formData.fecha}

@@ -96,7 +96,7 @@ margin-top: 1rem;
 
 .busqueda--mascota--campos{
     font-family: 'Mouse Memoirs', sans-serif;
-    font-size: 20px;
+   
     padding:1rem;
    
     display: flex;
@@ -367,7 +367,6 @@ input.invalid{
     font-size: 15px;
     transition: all .3s ease-in-out;
     border-radius: 25px;
-    margin-top: 10px;
     letter-spacing: 0.1px;
     line-height: 1em;
     padding: 20px 30px;
@@ -387,11 +386,12 @@ input.invalid{
 .select--buscar--especie{
     transition: all .2s ease-in-out;
     border-radius: 25px;
-    font-size: 15px;
-    margin: 5px;
-    text-transform: uppercase;
-    padding: 20px 30px;
-    font-family: 'Baloo Thambi', sans-serif;
+    font-size: 20px;
+   
+    text-align: center;
+    padding: 1rem;
+
+    
     background-color: #108896;
     color:#fff;
 }
@@ -400,3 +400,22 @@ input.invalid{
     background-color: #EF5030;
     color: #fff;
 }
+
+.input--especie{
+    
+    background: #ffefd5;
+    display: block;
+    width: 100%;
+    height: 54px;
+    
+    border-radius: 10px;
+    font-size: 16px;
+    outline: 0;
+    box-shadow: none;
+    border: 2px solid;
+    margin-bottom: 15px;
+    border-color: #F19F1F;
+    padding-left: 1rem;
+}
+
+.buscar--mascota>p{color:grey}

@@ -1,6 +1,6 @@
 
 
-import React, { Component } from 'react';
+import React from 'react';
 import DetallesMascota  from "./DetallesMascota"
 import {Link} from "react-router-dom"
 

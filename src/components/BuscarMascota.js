@@ -2,14 +2,55 @@ import React from "react"
 import Card from "./Card"
 import data from "./data"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faEnvelope, faEnvelopeOpen, faHouse, faList, faPhone, faSearch, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 const searchIcon =  <FontAwesomeIcon icon={faSearch} />
+let cards = {}
+
+
+function btn_buscar_mascota(){
+    
+    cards = data.filter(function(item) {
+        if(item.especie=="Gato"){
+        return (
+           
+            <Card
+            id={item.id}
+        imagen={item.foto1}
+        nombre={item.nombre}
+        raza={item.raza}  
+        fecha={item.fecha}
+        observaciones={item.observaciones}
+               
+            />
+        );
+    }
+     
+  })
+
+  cards.map(function(card) {
+   
+    return (
+        document.getElementById("cards-list").innerHTML = {card}
+    );
+
+ 
+})
+  
+  
+  console.log(cards)
+  
+}
+
+    
+    
+
+
 
 function BuscarMascota() {
     
 
-    const cards = data.map(item => {
+     cards = data.map(item => {
        
     return (
         <Card
@@ -23,6 +64,9 @@ function BuscarMascota() {
         />
     )
 })        
+
+
+
 
 /*function verDetallesMascota(id){
 
@@ -51,9 +95,9 @@ function BuscarMascota() {
     
     
     return (
-        <div>
+        <div class="buscar--mascota">
 
-        <p>Utiliza uno o varios campos del filtro de búsqueda para encontar a tu mascota.</p>
+        <p align="center">Utiliza uno o varios campos del filtro de búsqueda para encontar a tu mascota.</p>
         
         <div class="busqueda--mascota--campos">
 
@@ -69,7 +113,7 @@ function BuscarMascota() {
             </select>
 
 
-            <select 
+            <select class="select--buscar--especie"
                 id="sexo" 
                 name="sexo"
                 
@@ -80,30 +124,33 @@ function BuscarMascota() {
                 
             </select>
 
-            <input
+            <input class="input--especie"
                 type="text"
-                placeholder="Raza"
-                name="raza"
+                placeholder="UBICACION"
+                name="ubicacion"
                 required
             />
 
 
-        <input type="date" id="fecha" name="fecha" 
+        <input class="input--especie" type="date" id="fecha" name="fecha" 
                        
 
         min="2000-01-01" max="2022-12-31" 
         
         />
        
-        <button class="btn--buscar--mascota">{searchIcon} BUSCAR</button>
+        <button class="btn--buscar--mascota" onClick={btn_buscar_mascota}>{searchIcon} BUSCAR</button>
         </div>
 
 
-            <section className="cards-list">
+            <section className="cards-list" id="cards-list">
         
            {cards}
+          
             
             </section>
+
+            <div id="cards--render"></div>
         
 
         </div>

@@ -1,10 +1,10 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from "react"
 import {useParams} from "react-router-dom"
 import data from "./data"
 
-import {Link} from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faEnvelope, faEnvelopeOpen, faHouse, faList, faPhone, faSearch, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faPhone, faUser } from '@fortawesome/free-solid-svg-icons'
 /*import imagenAnimal from `../images/${thisService.foto1}`*/
 
 const phoneIcon = <FontAwesomeIcon icon={faPhone} />
