@@ -143,7 +143,7 @@ function BuscarMascota() {
         </div>
 
 
-            <section className="cards-list" id="cards-list">
+            <section className="cards-list cards-list-flex" id="cards-list">
         
            {cards}
           

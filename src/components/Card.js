@@ -30,7 +30,7 @@ export default function Card(props) {
     return (
        
       
-        <div class="col-lg-4 col-md-12 text-center mascota-list-item">
+        <div class="text-center mascota-list-item">
            
             {/*NOMBRE MASCOTA*/}
             <h5 class="sub-header">{props.nombre}</h5>

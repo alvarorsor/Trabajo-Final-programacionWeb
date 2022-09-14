@@ -94,7 +94,7 @@ margin-top: 1rem;
 
 .mascota-list-item{
     
-    margin: 4rem;
+    margin: 1rem;
 }
 
 .busqueda--mascota--campos{
@@ -126,9 +126,22 @@ margin-top: 1rem;
 }
 
 .cards-list {
+    border: 10px solid #F9F871;
+    max-width: 1500px;
+    margin: 0 auto;
+    width: 90%;
+    
+}
+
+.cards-list-flex {
+
+
     display: flex;
-    flex-wrap: wrap;
-    justify-content:center;
+    flex-direction: row;
+     flex-wrap: wrap; 
+     justify-content: center;
+
+     
     
 }
 
