@@ -301,7 +301,7 @@ function RegistrarMascota() {
 <br/>
 
 
-                <textarea 
+                <textarea class="text-area"
                 value={formData.observaciones}
                 placeholder="Observaciones"
                 onChange={handleChange}
@@ -384,7 +384,7 @@ function RegistrarMascota() {
 
             <br />
             <br />
-            <button>REGISTRAR MASCOTA</button>
+            <button class="btn-registrar-mascota">REGISTRAR MASCOTA</button>
 
     </div>
         
