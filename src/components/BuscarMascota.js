@@ -95,10 +95,11 @@ function BuscarMascota() {
     
     
     return (
+       
         <div class="buscar--mascota">
-
+{/*
         <p align="center">Utiliza uno o varios campos del filtro de búsqueda para encontar a tu mascota.</p>
-        
+         
         <div class="busqueda--mascota--campos">
 
 
@@ -141,7 +142,7 @@ function BuscarMascota() {
        
         <button class="btn--buscar--mascota" onClick={btn_buscar_mascota}>{searchIcon} BUSCAR</button>
         </div>
-
+*/}
 
             <section className="cards-list cards-list-flex" id="cards-list">
         
@@ -155,7 +156,7 @@ function BuscarMascota() {
 
         </div>
 
-
+    
     )
 }
 

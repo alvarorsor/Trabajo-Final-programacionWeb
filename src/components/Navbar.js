@@ -11,20 +11,33 @@ export default function Navbar() {
     return (
       <header>
 
-<ul class="nav nav-pills">
-<li class="nav-item">
+
+<nav class="navbar navbar-expand-lg nav-pills">
+  <div class="container-fluid">
+   
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+        
+          <a class="nav-link" aria-current="page" href="/">{houseIcon} PRINCIPAL</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/BuscarMascota">{searchIcon} BUSCAR MASCOTA</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/RegistrarMascota">{listhIcon} REGISTRAR MASCOTA</a>
+        </li>
+      </ul>
+     
+    </div>
+  </div>
+</nav>
 
 
-<Link to="/" class="nav-link">{houseIcon} PRINCIPAL</Link>
-</li>
-<li class="nav-item">
-<Link to="/BuscarMascota" class="nav-link">{searchIcon} BUSCAR MASCOTA</Link>
-</li>
-<li class="nav-item">
-<Link to="/RegistrarMascota" class="nav-link">{listhIcon} REGISTRAR MASCOTA</Link>
-</li>
 
-</ul>
 
   </header>
     )
