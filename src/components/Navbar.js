@@ -22,13 +22,13 @@ export default function Navbar() {
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
         
-          <a class="nav-link" aria-current="page" href="/">{houseIcon} PRINCIPAL</a>
+          <Link class="nav-link" aria-current="page" to="/">{houseIcon} PRINCIPAL</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/BuscarMascota">{searchIcon} BUSCAR MASCOTA</a>
+          <Link class="nav-link" to="/BuscarMascota">{searchIcon} BUSCAR MASCOTA</Link>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="/RegistrarMascota">{listhIcon} REGISTRAR MASCOTA</a>
+        <Link class="nav-link" to="/RegistrarMascota">{listhIcon} REGISTRAR MASCOTA</Link>
         </li>
       </ul>
      

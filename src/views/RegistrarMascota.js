@@ -1,33 +1,14 @@
 import React from "react"
-import data from "./data"
-
-
+import data from "../components/data"
 
 
 
 function RegistrarMascota() {
 
 
-
-
     const [formData, setFormData] = React.useState(
         {
-          /*  id: "",
-            nombre: "", 
-            color: "", 
-            sexo: "", 
-            raza: "", 
-            años: "",
-            meses: "",
-            chip: "",
-            orejas: "",
-            observaciones: "",
-            nombreDueño: "",
-            telefonoDueño: "",
-            mailDueño: "",
-            foto1: ""*/
-
-
+         
             id: "",
             nombre: "", 
             especie: "",
@@ -314,7 +295,6 @@ function RegistrarMascota() {
 <br />
 
 
-      
 
     </div>
             
@@ -397,28 +377,3 @@ function RegistrarMascota() {
 
 export default RegistrarMascota
 
-/*
-<div class="seccion--derecha">
-<h3>FOTOS</h3>
-<p>Foto 1*</p>
-
-<label for="img">Select image:</label>
-<input type="file" id="img" name="img" accept="image/*" />
-
-
-<p>Foto 2</p>
-<label for="img">Select image:</label>
-<input type="file" id="img" name="img" accept="image/*" />
-<p>Foto 3</p>
-<label for="img">Select image:</label>
-<input type="file" id="img" name="img" accept="image/*" />
-
-<p>¿Cuándo fue encontrado / perdido / puesto en adopción? *</p>
-<label for="start">Fecha </label>
-
-<input type="date" id="start" name="trip-start"
-
-min="2000-01-01" max="2022-12-31" />
-
-
-</div>*/

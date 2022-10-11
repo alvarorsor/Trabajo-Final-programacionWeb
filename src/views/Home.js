@@ -6,10 +6,9 @@ import {Link} from "react-router-dom"
 import card1 from "../images/card-item-1.jpg"
 import card2 from "../images/card-item-2.jpg"
 import card3 from "../images/card-item-3.jpg"
-// Import our custom CSS
 
 
-// Import all of Bootstrap's CSS
+
 
 
 function Home() {
@@ -118,86 +117,6 @@ function Home() {
 </div>
   </div>
 
-   {/*    
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    
-    <div class="carousel-item active">
-      
-      <img class="d-block w-100 carousel-item" src={imagenPerros} alt="First slide"/>
-     
-    <div class="carousel-caption d-none d-md-block">
-    <p>Amigos perdidos</p>
-    <p>Un portal para reencontrarnos y ayudar a encontrar un nuevo hogar</p>
-    </div>
-
-    </div>
-
-    <div class="carousel-item">
-     
-      <img class="d-block w-100 carousel-item" src={carousel_img_2} alt="Second slide"/>
-
-      <div class="carousel-caption d-none d-md-block">
-      <p>Si perdiste a tu mascota, no te preocupes, somos muchos y vamos a ayudarte a encontrarla junto con la comunidad</p>
-      <li>Si perdiste una mascota seleccioná en “Registrar una mascota” y registrala en nuestro sistema para 
-      poder ayudarte a encontrarla</li>
-    </div>
-
-    </div>
-
-    <div class="carousel-item">
-     
-      <img class="d-block w-100 carousel-item" src={carousel_img_3} alt="Third slide"/>
-
-      <div class="carousel-caption d-none d-md-block">
-    <p>Amigos perdidos</p>
-    <p>Un portal para reencontrarnos y ayudar a encontrar un nuevo hogar</p>
-    </div>
-
-    </div>
-
-  </div>
-
-
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-
-
-</div>
-
-  
-   
-    
-
-
-    <div class="principal--seccion--derecha">
-
-    <h1>Home Page</h1>
-        <img src={imagenPerros} />
-        <p>Amigos perdidos</p>
-        <p>Un portal para reencontrarnos y ayudar a encontrar un nuevo hogar</p>
-
-        <p>Si perdiste a tu mascota, no te preocupes, somos muchos y vamos a ayudarte a encontrarla junto con la comunidad</p>
-        <ul>
-            <li>Seleccioná en “Registrar una mascota” y registrate creando una cuenta en el portal.</li>
-            <li>Posteriormente, completá los datos de tu mascota perdida en la plantilla. Mientras mas detalles brindes, mejor. No te olvides de subir fotos en buena calidad.</li>
-            <li>Publicá a tu mascota en la plataforma. ¡Miles de personas verán la publicación aquí y te ayudarán en la búsqueda!. Nosotros nos encargaremos de difundirla en nuestras redes sociales y te avisaremos ante cualquier novedad.</li>
-        </ul>
-    
-     </div>*/}
-       
-       
        
  </div>
     )

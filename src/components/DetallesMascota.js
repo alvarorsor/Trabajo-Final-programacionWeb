@@ -2,10 +2,9 @@
 import React from "react"
 import {useParams} from "react-router-dom"
 import data from "./data"
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faPhone, faUser } from '@fortawesome/free-solid-svg-icons'
-/*import imagenAnimal from `../images/${thisService.foto1}`*/
+
 
 const phoneIcon = <FontAwesomeIcon icon={faPhone} />
 const userIcon = <FontAwesomeIcon icon={faUser} />
@@ -41,8 +40,6 @@ function DetallesMascota(props) {
 
         <div class="campos--izquierda--derecha">
 
-
-      
 
         <div class="campos-izquierda">
 

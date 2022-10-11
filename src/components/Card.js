@@ -1,5 +1,4 @@
 
-
 import React from 'react';
 import DetallesMascota  from "./DetallesMascota"
 import {Link} from "react-router-dom"
@@ -65,30 +64,8 @@ export default function Card(props) {
       </div>
             
 
-
-
-
-           {/* <img src={images[props.imagen]} className="card--image" />
-
-           
-            <p>Sexo: {props.sexo}</p>
-            <p>Raza: {props.raza}</p>
-            <p>Años: {props.años}</p>
-            <p>Meses: {props.meses}</p>
-
-            <a class="btn--buscar--mascota" href="https://huellitasperdidas.org/mascotas/draki/">Ver Detalles</a>
-          
-            
-           */}
-       
        
         </div>
     )
 }
 
-//<Link to="/DetallesMascota" class="nav-link">DETALLES MASCOTA</Link>
-//<button id={`btn_detalles_mascota_ID${props.id}`} onClick={`verDetallesMascota(${props.id})`}>Ver detalles</button>
-/*
-<Routes>
-<Route exact path="/DetallesMascota" element={<DetallesMascota/>} />
- </Routes>*/

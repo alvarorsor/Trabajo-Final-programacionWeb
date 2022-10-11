@@ -2,11 +2,11 @@ import React from "react"
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 
-import BuscarMascota from "./components/BuscarMascota"
-import RegistrarMascota from "./components/RegistrarMascota"
+import BuscarMascota from "./views/BuscarMascota"
+import RegistrarMascota from "./views/RegistrarMascota"
 import DetallesMascota from "./components/DetallesMascota"
 import Navbar from "./components/Navbar"
-import Home from "./components/Home"
+import Home from "./views/Home"
 import Footer from "./components/Footer"
 
 function App() {    
