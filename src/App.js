@@ -7,7 +7,6 @@ import RegistrarMascota from "./components/RegistrarMascota"
 import DetallesMascota from "./components/DetallesMascota"
 import Navbar from "./components/Navbar"
 import Home from "./components/Home"
-import About from "./components/About"
 import Footer from "./components/Footer"
 
 function App() {    
