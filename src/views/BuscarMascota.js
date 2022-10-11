@@ -8,42 +8,6 @@ const searchIcon =  <FontAwesomeIcon icon={faSearch} />
 let cards = {}
 
 
-{/*function btn_buscar_mascota(){
-    
-    cards = data.filter(function(item) {
-        if(item.especie=="Gato"){
-        return (
-           
-            <Card
-            id={item.id}
-        imagen={item.foto1}
-        nombre={item.nombre}
-        raza={item.raza}  
-        fecha={item.fecha}
-        observaciones={item.observaciones}
-               
-            />
-        );
-    }
-     
-  })
-
-  cards.map(function(card) {
-   
-    return (
-        document.getElementById("cards-list").innerHTML = {card}
-    );
-
- 
-})
-  
-  
-  console.log(cards)
-  
-}// cierra btn_buscar_mascota
-*/}
-    
-
 function BuscarMascota() {
     
 

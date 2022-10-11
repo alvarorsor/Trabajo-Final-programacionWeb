@@ -37,17 +37,9 @@ export default function Navbar() {
 </nav>
 
 
-
-
   </header>
     )
 }
 
-/*
-<ul>
-<li><Link to="/">Home</Link></li>
-<li><Link to="/BuscarMascota">BUSCAR MASCOTA</Link></li>
-<li><Link to="/EncontrarMascota">ENCONTRAR MASCOTA</Link></li>
-</ul>*/
 
 
