@@ -10,41 +10,28 @@ let cards = {}
 
 function BuscarMascota() {
     
-
-     cards = data.map(item => {
+cards = data.map(item => {
        
     return (
         <Card
-        id={item.id}
-    imagen={item.foto1}
-    nombre={item.nombre}
-    raza={item.raza}  
-    fecha={item.fecha}
-    observaciones={item.observaciones}
-           
+            id={item.id}
+            imagen={item.foto1}
+            nombre={item.nombre}
+            raza={item.raza}  
+            fecha={item.fecha}
+            observaciones={item.observaciones}
         />
     )
-})        
-
-
+}
+)        
     return (
-       
-        <div class="buscar--mascota">
-
-
+<div class="buscar--mascota">
             <section className="cards-list cards-list-flex" id="cards-list">
-        
-           {cards}
-          
-            
+                    {cards}
             </section>
+        <div id="cards--render"></div>
+</div>
 
-            <div id="cards--render"></div>
-        
-
-        </div>
-
-    
     )
 }
 

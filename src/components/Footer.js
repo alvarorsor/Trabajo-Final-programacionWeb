@@ -8,14 +8,13 @@ const mailIcon = <FontAwesomeIcon icon={faEnvelope} />
 const ubicacionIcon = <FontAwesomeIcon icon={faMapLocation} />
 
 
-
 export default function Footer() {
     return (
-      <footer>
+<footer>
     <p>{copyrightIcon}  2022 Amigos Perdidos.</p>
     <p>{phoneIcon}  (381) 2222 07 3129</p>
     <p>{mailIcon}  hola@amigosperdidos.org</p>
     <p>{ubicacionIcon}  San Miguel De Tucuman, Argentina</p>
-  </footer>
+</footer>
     )
 }

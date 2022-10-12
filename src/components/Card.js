@@ -1,8 +1,5 @@
-
 import React from 'react';
-import DetallesMascota  from "./DetallesMascota"
 import {Link} from "react-router-dom"
-
 
 
 function importAll(r) {
@@ -13,59 +10,43 @@ function importAll(r) {
   
   const images = importAll(require.context('../images', false, /\.(png|jpe?g|svg)$/));
   
-  <img src={images['lili.png']} />
+ // <img src={images['lili.png']} />
 
 export default function Card(props) {
    
-    <DetallesMascota
-    id={props.id}
-    imagen={props.foto1}
-    nombre={props.nombre}
-    raza={props.raza}  
-    fecha={props.fecha}
-    observaciones={props.observaciones}
-/>
+    
    
     return (
-       
-      
-        <div class="text-center mascota-list-item">
-           
-            {/*NOMBRE MASCOTA*/}
-            <h5 class="sub-header">{props.nombre}</h5>
-            
-            {/*team member*/}
-   
-   <div class="team-wrap">
-     <div class="member text-center">
-         <div class="wrap">
-         {/* Info */}
-             <div class="info">
-             {/* RAZA MASCOTA*/}
-             <h3 class="name">{props.raza}</h3>
-             {/* Encontrado el día */}
-                                 <h4 class="position">Perdido el día {props.fecha}</h4>
-                         </div>
-                         { /* 14/07/2017 /info/*}
-         
-         {/* IMAGEN DESTACADA 1*/}
-             <img src={images[props.imagen]} alt="" class="img-circle img-responsive"/>                           
-         </div>
-         {/* /wrap */}
-         <div class="more">
-         {/* OBSERVACIONES */}
-             <p>{props.observaciones}</p>
-          {/* DETALLES */}
-          <Link class="btn--buscar--mascota" to={`/DetallesMascota/${props.id}`}>Ver detalles</Link> 
-              </div>
-              {/* /more  */}
-          </div>
-          { /* / member  */}
-      </div>
-            
+<div class="text-center mascota-list-item">
 
-       
-        </div>
+           {/*NOMBRE MASCOTA*/}
+            <h5 class="sub-header">{props.nombre}</h5>
+            {/*team member*/}
+    <div class="team-wrap">
+        <div class="member text-center">
+            <div class="wrap">
+                {/* Info */}
+                <div class="info">
+                    {/* RAZA MASCOTA*/}
+                    <h3 class="name">{props.raza}</h3>
+                    {/* Encontrado el día */}
+                    <h4 class="position">Perdido el día {props.fecha}</h4>
+                </div>
+                {/* IMAGEN DESTACADA 1*/}
+                <img src={images[props.imagen]} alt="" class="img-circle img-responsive"/>                           
+            </div>
+                 {/* /wrap */}
+                <div class="more">
+                    {/* OBSERVACIONES */}
+                    <p>{props.observaciones}</p>
+                    {/* DETALLES */}
+                    <Link class="btn--buscar--mascota" to={`/DetallesMascota/${props.id}`}>Ver detalles</Link> 
+                </div>{/* /more  */}
+        
+          </div> { /* / member  */}
+     </div>
+            
+</div>
     )
 }
 

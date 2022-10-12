@@ -11,8 +11,9 @@ const userIcon = <FontAwesomeIcon icon={faUser} />
 const mailIcon = <FontAwesomeIcon icon={faEnvelope} />
 
 
-
+//convertir ruta de imagen para utilizar en react
 function importAll(r) {
+
         let images = {};
         r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
         return images;
@@ -20,13 +21,13 @@ function importAll(r) {
       
       const images = importAll(require.context('../images', false, /\.(png|jpe?g|svg)$/));
       
-      <img src={images['lili.png']} />
+      //<img src={images['lili.png']} />
 
 
 
 
-function DetallesMascota(props) {
-   
+function DetallesMascota() {
+
     const {serviceId} = useParams()
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
     const thisService = data.find(service => service.id === serviceId)
@@ -34,98 +35,97 @@ function DetallesMascota(props) {
    
    
     return (
-        <div class="detalles--mascota">
 
+<div class="detalles--mascota">
 
-
-        <div class="campos--izquierda--derecha">
-
+    <div class="campos--izquierda--derecha">
 
         <div class="campos-izquierda">
 
-        <div class="campos">
-        
-        <label>Especie</label>
-        <br />
-        <label>Raza</label>
-        <br />
-        <label>Sexo</label>
-        <br />
-        <label>Años</label>
-        <br />
-        <label>Meses</label>
-        <br />
-        <label>Chip</label>
-        <br />
-        <label>Placa</label>
-        <br />
-        <label>Cola</label>
-        <br />
-        <label>Orejas</label>
-        <br />
-        <label>Color</label>
-        <br />
-        <label>Manchas</label>
-        <br />
-        <label>Fecha</label>
-        <br />
-        <label>Observaciones</label>
-        <br />
+            <div class="campos">
+            
+                        <label>Especie</label>
+                        <br />
+                        <label>Raza</label>
+                        <br />
+                        <label>Sexo</label>
+                        <br />
+                        <label>Años</label>
+                        <br />
+                        <label>Meses</label>
+                        <br />
+                        <label>Chip</label>
+                        <br />
+                        <label>Placa</label>
+                        <br />
+                        <label>Cola</label>
+                        <br />
+                        <label>Orejas</label>
+                        <br />
+                        <label>Color</label>
+                        <br />
+                        <label>Manchas</label>
+                        <br />
+                        <label>Fecha</label>
+                        <br />
+                        <label>Observaciones</label>
+                        <br />
+
+            </div>
 
 
-        </div>
+             <div class="campos-datos">
 
 
-        <div class="campos-datos">
-
-
-        <label>{thisService.especie}</label>
-        <br />
-        <label>{thisService.raza}</label>
-        <br />
-        <label>{thisService.sexo}</label>
-        <br />
-        <label>{thisService.años}</label>
-        <br />
-        <label>{thisService.meses}</label>
-        <br />
-        <label>{thisService.chip}</label>
-        <br />        
-        <label>{thisService.placa}</label>
-        <br />    
-        <label>{thisService.cola}</label>
-        <br />    
-        <label>{thisService.orejas}</label>
-        <br />    
-        <label>{thisService.color}</label>
-        <br />    
-        <label>{thisService.manchas}</label>
-        <br />  
-        <label>{thisService.fecha}</label>
-        <br />    
-        <label class="observaciones">{thisService.observaciones}</label>
-        
-        
-        </div>
+                        <label>{thisService.especie}</label>
+                        <br />
+                        <label>{thisService.raza}</label>
+                        <br />
+                        <label>{thisService.sexo}</label>
+                        <br />
+                        <label>{thisService.años}</label>
+                        <br />
+                        <label>{thisService.meses}</label>
+                        <br />
+                        <label>{thisService.chip}</label>
+                        <br />        
+                        <label>{thisService.placa}</label>
+                        <br />    
+                        <label>{thisService.cola}</label>
+                        <br />    
+                        <label>{thisService.orejas}</label>
+                        <br />    
+                        <label>{thisService.color}</label>
+                        <br />    
+                        <label>{thisService.manchas}</label>
+                        <br />  
+                        <label>{thisService.fecha}</label>
+                        <br />    
+                        <label class="observaciones">{thisService.observaciones}</label>
+            
+            
+             </div>
        
-        </div>
+        </div>{/*cierra campos-izquierda*/}
         
 
 
         <div class="campos-derecha">
 
-        <h1 class="detalles--mascota--nombre">{thisService.nombre}</h1>
-        <br />
-        <img src={images[thisService.foto1]} class="detalles--mascota--imagen"/>
+                        <h1 class="detalles--mascota--nombre">{thisService.nombre}</h1>
+                        <br />
+                        <img src={images[thisService.foto1]} class="detalles--mascota--imagen"/>
 
-        </div>
+        </div>{/*cierra campos-derecha*/}
 
-        </div>
-
+       
+       
+    </div>{/*cierra campos-izquierda-derecha*/}
 
 
         <h3 id="datos-de-contacto">DATOS DE CONTACTO</h3>
-        <div class="datos-contacto-dueño">
+        
+    <div class="datos-contacto-dueño">
         
         <div class="box_dueño_nombre">
         <p id="box_dueño-user">{userIcon}</p>
@@ -146,9 +146,10 @@ function DetallesMascota(props) {
         <p id="box_dueño-nombre">{thisService.mailDueño}</p>
         </div>
        
-        </div>
+    </div>{/*cierra datos-contacto-dueño*/}
       
-        </div>
+</div> 
+
     )
 }
 
