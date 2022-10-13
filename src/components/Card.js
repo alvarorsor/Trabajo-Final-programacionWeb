@@ -14,7 +14,6 @@ function importAll(r) {
 
 export default function Card(props) {
    
-    
    
     return (
 <div class="text-center mascota-list-item">
