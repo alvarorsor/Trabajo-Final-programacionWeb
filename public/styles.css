@@ -502,3 +502,20 @@ input.invalid{
 }
 
 
+.filtro-cards{
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.filtro-cards>input{
+    color:darkolivegreen;
+    margin-bottom: 1rem;
+}
+
+
+
+.buscar--mascota>p{
+    color:#9b9292;
+    margin-top: 1rem;
+}

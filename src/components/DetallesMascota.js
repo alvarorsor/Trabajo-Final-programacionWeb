@@ -5,6 +5,9 @@ import data from "./data"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faPhone, faUser } from '@fortawesome/free-solid-svg-icons'
 import {Link} from "react-router-dom"
+import { useEffect, useState } from 'react';
+import buscarMascota from '../views/BuscarMascota'
+
 
 const phoneIcon = <FontAwesomeIcon icon={faPhone} />
 const userIcon = <FontAwesomeIcon icon={faUser} />
@@ -26,14 +29,22 @@ function importAll(r) {
 
 
 
-function DetallesMascota() {
+function DetallesMascota(props){
 
     const {serviceId} = useParams()
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
-    const thisService = data.find(service => service.id === serviceId)
    
-   
-   
+   //const thisService = data.find(service => service.id === serviceId)
+
+     //=  props.datos.find(service => service.id === serviceId)
+    
+     const thisService = props.datos.find(mascota => 
+       mascota.id == serviceId)
+        
+
+       
+        
+        
     return (
         
         <><div>
@@ -77,35 +88,36 @@ function DetallesMascota() {
 
                         </div>
 
-
+                       
+                       
                         <div class="campos-datos">
 
 
-                            <label>{thisService.especie}</label>
+                            <label>{thisService.attributes.especie}</label>
                             <br />
-                            <label>{thisService.raza}</label>
+                            <label>{thisService.attributes.raza}</label>
                             <br />
-                            <label>{thisService.sexo}</label>
+                            <label>{thisService.attributes.sexo}</label>
                             <br />
-                            <label>{thisService.años}</label>
+                            <label>{thisService.attributes.años}</label>
                             <br />
-                            <label>{thisService.meses}</label>
+                            <label>{thisService.attributes.meses}</label>
                             <br />
-                            <label>{thisService.chip}</label>
+                            <label>{thisService.attributes.chip}</label>
                             <br />
-                            <label>{thisService.placa}</label>
+                            <label>{thisService.attributes.placa}</label>
                             <br />
-                            <label>{thisService.cola}</label>
+                            <label>{thisService.attributes.cola}</label>
                             <br />
-                            <label>{thisService.orejas}</label>
+                            <label>{thisService.attributes.orejas}</label>
                             <br />
-                            <label>{thisService.color}</label>
+                            <label>{thisService.attributes.color}</label>
                             <br />
-                            <label>{thisService.manchas}</label>
+                            <label>{thisService.attributes.manchas}</label>
                             <br />
-                            <label>{thisService.fecha}</label>
+                            <label>{thisService.attributes.fecha}</label>
                             <br />
-                            <label class="observaciones">{thisService.observaciones}</label>
+                            <label class="observaciones">{thisService.attributes.observaciones}</label>
 
 
                         </div>
@@ -116,9 +128,9 @@ function DetallesMascota() {
 
                     <div class="campos-derecha">
 
-                        <h1 class="detalles--mascota--nombre">{thisService.nombre}</h1>
+                        <h1 class="detalles--mascota--nombre">{thisService.attributes.nombre}</h1>
                         <br />
-                        <img src={images[thisService.foto1]} class="detalles--mascota--imagen" />
+                        <img src={images[thisService.attributes.foto1]} class="detalles--mascota--imagen" />
 
                     </div>{/*cierra campos-derecha*/}
 
@@ -134,20 +146,20 @@ function DetallesMascota() {
                     <div class="box_dueño_nombre">
                         <p id="box_dueño-user">{userIcon}</p>
                         <p id="box_dueño-nombre-1">DUEÑO</p>
-                        <p id="box_dueño-nombre">{thisService.nombreDueño}</p>
+                        <p id="box_dueño-nombre">{thisService.attributes.nombreDuenio}</p>
                     </div>
 
 
                     <div class="box_dueño_telefono">
                         <p id="box_dueño-user">{phoneIcon}</p>
                         <p id="box_dueño-nombre-1">TELEFONO</p>
-                        <p id="box_dueño-nombre">{thisService.telefonoDueño}</p>
+                        <p id="box_dueño-nombre">{thisService.attributes.telefonoDuenio}</p>
                     </div>
 
                     <div class="box_dueño_correo">
                         <p id="box_dueño-user">{mailIcon}</p>
                         <p id="box_dueño-nombre-1">CORREO</p>
-                        <p id="box_dueño-nombre">{thisService.mailDueño}</p>
+                        <p id="box_dueño-nombre">{thisService.attributes.mailDuenio}</p>
                     </div>
 
                 </div>{/*cierra datos-contacto-dueño*/}

@@ -1,6 +1,6 @@
 import React from "react"
-import data from "../components/data"
-
+//import data from "../components/data"
+import { useEffect, useState } from 'react';
 
 
 function RegistrarMascota() {
@@ -8,48 +8,52 @@ function RegistrarMascota() {
 
     const [formData, setFormData] = React.useState(
         {
-         
-            id: "",
-            nombre: "", 
-            especie: "",
-            raza: "",
-            tamaño: "",
-            sexo: "",
-            años: "",
-            meses: "",
-            chip: "",
-            placa: "",
-            cola: "",
-            orejas: "",
-            color: "",
-            manchas: "",
-            observaciones: "",
-            foto1: "",
-            foto2: "",
-            foto3: "",
-            fecha: "",
-            nombreDueño: "",
-            telefonoDueño: "",
-            mailDueño: ""
+          
+
+            nombre: '',
+            foto1: '',
+            raza: '',
+            fecha: '',
+            especie: '',
+            tamano: '',
+            sexo: '',
+            anios: '',
+            meses: '',
+            chip: '',
+            placa: '',
+            cola: '',
+            orejas: '',
+            color: '',
+            manchas: '',
+            observaciones: '',
+            nombreDuenio: '',
+            telefonoDuenio: '',
+            mailDuenio: '',
+            foto2: '',
+            foto3: '',
+        
             }
     )
 
     function handleChange(event) {
         const {name, value, type, checked} = event.target
-        setFormData(prevFormData => {
+        setFormData(prevFormData =>{
             return {
+               
                 ...prevFormData,
+            
                 [name]: type === "checkbox" ? checked : value
-                
-            }
+            
+        
+        }
         })
         
     }
     
-    let id_number = (data.length + 1).toString()
+    
     function handleSubmit(event) {
 
-
+        //validacion email
         const email = document.getElementById("mail");
 
         email.addEventListener("input", function (event) {
@@ -60,15 +64,37 @@ function RegistrarMascota() {
           }
         });
       
-        setFormData(item => item.id = id_number)
+      
 
         event.preventDefault()
         // submitToApi(formData)
-        console.log(formData)
+        console.log(formData.cola)
        
-        
+      
 
-        data.push(formData)
+
+
+
+         //POST
+       fetch('http://localhost:1337/api/mascotas', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            
+            data:(
+                
+                formData
+            )
+           
+            
+}),
+        })
+        .then(response => response.json())
+        .then(data => console.log(data));
+        
+    
     }
 
 
@@ -125,10 +151,10 @@ function RegistrarMascota() {
 
         
             <select 
-                id="tamaño" 
-                value={formData.tamaño}
+                id="tamano" 
+                value={formData.tamano}
                 onChange={handleChange}
-                name="tamaño"
+                name="tamano"
                 required
             >
                 <option value="">Tamaño*</option>
@@ -160,10 +186,10 @@ function RegistrarMascota() {
 
 <br />
             <select 
-                id="años" 
-                value={formData.años}
+                id="anios" 
+                value={formData.anios}
                 onChange={handleChange}
-                name="años"
+                name="anios"
                 required
             >
              <option value="">Años*</option>
@@ -336,8 +362,8 @@ function RegistrarMascota() {
                 type="text"
                 placeholder="Nombre dueño*"
                 onChange={handleChange}
-                name="nombreDueño"
-                value={formData.nombreDueño}
+                name="nombreDuenio"
+                value={formData.nombreDuenio}
                 required
             />
 <br/>
@@ -345,8 +371,8 @@ function RegistrarMascota() {
                 type="text"
                 placeholder="Telefono dueño*"
                 onChange={handleChange}
-                name="telefonoDueño"
-                value={formData.telefonoDueño}
+                name="telefonoDuenio"
+                value={formData.telefonoDuenio}
                 required
             />
 <br/>
@@ -354,8 +380,8 @@ function RegistrarMascota() {
                 type="email"
                 placeholder="Mail dueño"
                 onChange={handleChange}
-                name="mailDueño"
-                value={formData.mailDueño}
+                name="mailDuenio"
+                value={formData.mailDuenio}
                 id="mail"
             />
 
