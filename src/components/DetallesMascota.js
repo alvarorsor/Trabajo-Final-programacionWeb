@@ -99,7 +99,7 @@ function DetallesMascota(props){
                             <br />
                             <label>{thisService.attributes.sexo}</label>
                             <br />
-                            <label>{thisService.attributes.años}</label>
+                            <label>{thisService.attributes.anios}</label>
                             <br />
                             <label>{thisService.attributes.meses}</label>
                             <br />
